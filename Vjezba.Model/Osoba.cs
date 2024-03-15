@@ -22,6 +22,8 @@ public class Osoba
         get => _oib;
         set
         {
+            if (value.Length != 11)
+                throw new InvalidOperationException("JMBAG sadrži isključivo 10 znamenaka");
             long valueToLong;
             try
             {
@@ -43,6 +45,8 @@ public class Osoba
         get => _jmbg;
         set
         {
+            if (value.Length != 13)
+                throw new InvalidOperationException("JMBG sadrži isključivo 13 znamenaka");
             try
             {
                 long valueToLong = long.Parse(value);

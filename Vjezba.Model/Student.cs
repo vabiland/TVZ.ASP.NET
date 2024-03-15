@@ -13,6 +13,8 @@ public class Student : Osoba
         {
             try
             {
+                if (value.Length != 10)
+                    throw new InvalidOperationException("JMBAG sadrži isključivo 10 znamenaka");
                 long valueToLong = long.Parse(value);
                 if (valueToLong > 10000000 && valueToLong < 10000000000)
                     _jmbag = valueToLong.ToString("D10");
