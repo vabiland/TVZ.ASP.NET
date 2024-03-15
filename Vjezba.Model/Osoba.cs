@@ -23,7 +23,7 @@ public class Osoba
         set
         {
             if (value.Length != 11)
-                throw new InvalidOperationException("JMBAG sadrži isključivo 10 znamenaka");
+                throw new InvalidOperationException("JMBAG sadrži isključivo 11 znamenaka");
             long valueToLong;
             try
             {
